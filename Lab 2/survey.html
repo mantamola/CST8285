@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--This is the docktype.-->
+<html lang="en">
+
+<head>
+    <!-- This is head content. -->
+    <meta charset="UTF-8" />
+    <!--This is the title.-->
+    <title>Survey</title>
+</head>
+
+<body>
+    <!-- This is body content. Include form elements. -->
+    <form action="process.php" method="GET" enctype="text/plain">
+        <!-- This is the basic information part. Prompt user
+            to input the first name and last name.-->
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname" value="Di" disabled /><br><br>
+
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname" value="Lin" maxlength="30" />
+
+        </fieldset><br><br>
+
+        <!-- This is the shirt choosing part. Prompt user
+            to select type, size and color.-->
+        <fieldset>
+            <legend>Choose Shirt</legend>
+            <!-- Prompt user to select type. Default value is Sleeveless.-->
+            <label for="types">Type of Shirt:</label>
+            <select id="types" name="type">
+                <option value="SleeveLess" selected>Sleeveless</option>
+                <option value="ShortSleeve">Short Sleeve</option>
+                <option value="Polo">Polo</option>
+                <option value="CapSleeves">Cap Sleeves</option>
+            </select><br><br>
+            <!-- Prompt user to select size. Default value is medium.-->
+            <label>Size:</label>
+            <input type="radio" id="large" name="size" value="Large" />
+            <label for="large">Large</label>
+            <input type="radio" id="medium" name="size" value="Medium" checked />
+            <label for="medium">Medium</label>
+            <input type="radio" id="small" name="size" value="Small" />
+            <label for="small">Small</label><br><br>
+            <!-- Prompt user to select color. Default value is navy.-->
+            <label>Color:</label>
+            <input type="checkbox" id="color1" name="color1" value="red" />
+            <label for="color1">Red</label>
+            <input type="checkbox" id="color2" name="color2" value="navy" checked />
+            <label for="color2">Navy</label>
+            <input type="checkbox" id="color3" name="color3" value="black" />
+            <label for="color3">Black</label>
+
+        </fieldset><br><br>
+
+        <!-- This is the comment and submit part. Prompt user
+            to input comments, submit this form or reset every field.-->
+        <label for="comments">Comments?</label><br>
+        <textarea id="comments" name="comments" rows="4" cols="40"></textarea><br><br>
+
+        <button type="submit">Buy Now!</button>
+        <button type="reset">Reset</button>
+        <br><br>
+
+    </form>
+</body>
+
+</html>
